@@ -1,0 +1,54 @@
+.banner-right {
+  position: absolute;
+  right: 0;
+  top: 0rem;
+}
+
+.computer-svg {
+  position: absolute;
+  bottom: 2.5rem;
+  right: 0;
+  transform: scale(.9);
+  transform-origin: right;
+}
+
+.gear-svg-1 {
+  position: absolute;
+  bottom: 19rem;
+  right: 15.5rem;
+  transform: scale(.9);
+  animation: gear_rotate 60s linear infinite;
+}
+
+.gear-svg-2 {
+  position: absolute;
+  bottom: 11.5rem;
+  right: 18.5rem;
+  transform: scale(0.9);
+  animation-name: gear_rotate;
+  animation-duration: 60s;
+  animation-direction: reverse;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes gear_rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.banner-circle {
+  border-radius: 100%;
+  width: 36rem;
+  height: 36rem;
+  margin-right: 2rem;
+  background: rgba(var(--accent), 0.37);
+}
+
+.svg-stroke {
+  stroke: var(--dark);
+}

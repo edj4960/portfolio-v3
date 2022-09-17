@@ -1,0 +1,20 @@
+.main-banner__wave-wrapper {
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: auto;
+  width: 100%;
+  z-index: 1;
+}
+
+.main-banner__wave {
+  display: block;
+  pointer-events: none;
+  position: relative;
+  transform: translateX(-70rem);
+  transition: transform .3s;
+  width: 284.44444rem;
+}

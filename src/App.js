@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import './App.scss';
+import styles from './styles';
+
+import Header from './components/Header';
+import Home from './components/Home';
 
 function App() {
+  useEffect(() => {
+    const appStyle = document.getElementById('App').style;
+    const idx = 1;
+
+    for (const key in styles[idx]) {
+      appStyle.setProperty(`--${key}`, styles[idx][key]);
+    }
+
+    // document.addEventListener('click', () => {
+    // });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="App">
+      <Header />
+      <Home />
+    
     </div>
   );
 }

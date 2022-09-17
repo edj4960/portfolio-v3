@@ -1,0 +1,27 @@
+#sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100000;
+}
+
+header {
+  padding: 2rem 0;
+  background: linear-gradient(91.09deg, var(--main) 33.39%, var(--main2) 100.04%);
+  color: var(--dark2);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+a:hover {
+  color: white;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  li {
+    cursor: pointer;
+  }
+}

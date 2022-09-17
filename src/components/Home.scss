@@ -1,0 +1,35 @@
+@import 'src/Styles.scss';
+
+#home {
+  .container {
+    z-index: 1000;
+  }
+}
+
+.main-banner {
+  background: linear-gradient(91.09deg, var(--main) 33.39%, var(--main2) 100.04%);
+  overflow: hidden;
+  padding-top: 5.33333rem;
+  position: relative;
+  padding-bottom: 3rem;
+  height:34rem;
+}
+
+.banner-left {
+  padding-top: 4rem;
+}
+
+button {
+  font-size: 24px;
+  color: var(--dark2);
+  padding: 15px 60px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .35s;
+  margin-top: 1rem;
+
+  &:hover {
+    color: white;
+    background-color: var(--dark2);
+  }
+}
