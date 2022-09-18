@@ -63,7 +63,20 @@ button {
 }
 
 a {
-  color: var(--dark2);
   text-decoration: none;
-  transition: all .35s;
+  color: var(--dark2);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.svg-stroke {
+  stroke: var(--dark);
+}
+
+.svg-fill-accent {
+  fill: rgba(var(--accent), 0.5);
 }

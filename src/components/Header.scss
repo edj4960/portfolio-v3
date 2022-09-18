@@ -12,16 +12,22 @@ header {
   font-weight: 700;
 }
 
-a:hover {
-  color: white;
-}
 
-ul {
-  margin: 0;
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  li {
-    cursor: pointer;
+
+.navigation {
+  ul {
+    display: flex;
+    gap: 2rem;
+    li {
+      cursor: pointer;
+    }
+  }
+
+  a {
+    color: var(--dark2);
+    transition: all .35s;
+    &:hover {
+      color: white;
+    }
   }
 }

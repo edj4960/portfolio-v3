@@ -4,6 +4,8 @@ import styles from './styles';
 
 import Header from './components/Header';
 import Home from './components/Home';
+import About from './components/About';
+import Jobs from './components/Jobs';
 
 function App() {
   useEffect(() => {
@@ -22,6 +24,8 @@ function App() {
     <div id="App">
       <Header />
       <Home />
+      <About />
+      <Jobs />
     
     </div>
   );

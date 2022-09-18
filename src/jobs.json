@@ -1,0 +1,46 @@
+[
+  {
+    "name": "NewAge",
+    "title": "Full-Stack Developer",
+    "link": "https://newage.com/",
+    "dates": "September 2021 - Present",
+    "info": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel leo imperdiet, ultrices justo et",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel leo imperdiet, ultrices justo et",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel leo imperdiet, ultrices justo et"
+    ]
+  },
+  {
+    "name": "Storier",
+    "title": "Software Engineer",
+    "link": "https://storier.fm/",
+    "dates": "April 2021 - Present",
+    "info": [
+      "Testing",
+      "testing 2",
+      "testing 3"
+    ]
+  },
+  {
+    "name": "Amano",
+    "title": "Software Engineer",
+    "link": "https://storier.fm/",
+    "dates": "April 2021 - Present",
+    "info": [
+      "Testing",
+      "testing 2",
+      "testing 3"
+    ]
+  },
+  {
+    "name": "Campus Accom",
+    "title": "Software Engineer",
+    "link": "https://housing.byu.edu/",
+    "dates": "April 2021 - Present",
+    "info": [
+      "Testing",
+      "testing 2",
+      "testing 3"
+    ]
+  }
+]

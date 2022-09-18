@@ -1,0 +1,23 @@
+.section-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  &::before, &::after {
+    flex-grow: 1;
+    order: 1;
+    background-color: var(--main);
+    content: "";
+    height: 4px;
+    border-radius: 99px;
+  }
+}
+
+.header-content {
+  color: var(--dark2);
+  font-weight: 700;
+  font-size: 48px;
+  order: 1;
+  margin: 0 .5rem;
+}

@@ -1,0 +1,151 @@
+#jobs-section {
+  margin-top: 5rem;
+  --tab-height: 52px;
+  --offset: 5px;
+
+  #jobs-list {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    width: fit-content;
+    gap: 0;
+    ul {
+      padding: 0;
+    }
+    li {
+      padding: 15px 10px;
+      margin: var(--offset) 0;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      color: var(--dark2);
+      font-weight: 700;
+      cursor: pointer;
+      &:hover, &.selected {
+        background-color: rgba(var(--accent), 0.1);;
+      }
+      transition: all .25s;
+    }
+  }
+}
+
+.jobs-selector {
+  border-right: 5px solid var(--main);
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  padding: 10px 0;
+
+  &::before, &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: var(--main);
+    right: -5px;
+  }
+
+  &::before {
+    top: -3px;
+  }
+  &::after {
+    bottom: -3px;
+  }
+}
+
+.jobs-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.desk-icon {
+  margin-top: 80px;
+}
+
+.job-text {
+  width: 450px;
+
+  ul {
+    padding-left: 25px;
+  }
+  li {
+    position: relative;
+    margin-bottom: 15px;
+    color: var(--dark);
+    font-weight: 700;
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      background-color: rgba(var(--accent), 0.37);
+      margin: 0 auto;
+      bottom: -0rem;
+      top: 0;
+      left: -4px;
+      z-index: -1;
+    }
+  }
+}
+
+.jobs-container {
+  display: flex;
+}
+
+.selected-job {
+  padding-left: 15px;
+  transition: opacity 0.4s ease-in-out;
+  h3 {
+    font-size: 24px;
+    margin: 5px 0 0 0;
+    span:nth-child(1) {
+      color: var(--dark2);
+    }
+    span:nth-child(2) {
+      color: var(--main);
+    }
+  }
+
+  a {
+    cursor: pointer;
+    color: var(--main);
+    display: inline-block;
+    
+    &::after {
+      content: "";
+      width: 100%;
+      display: block;
+      width: 0px;
+      height: 2px;
+      position: relative;
+      bottom: 3px;
+      background-color: var(--main);
+      opacity: 0.5;
+      transition: width 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  p {
+    margin: 0 0 20px;
+    font-size: 14px;
+  }
+}
+
+.selected-marker {
+  width: 5px;
+  height: var(--tab-height);
+  background-color: var(--dark);
+  position: absolute;
+  right: -5px;
+  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+}
