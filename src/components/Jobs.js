@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import SectionHeader from './SectionHeader';
 import DeskIcon from './DeskIcon';
-import jobs from '../jobs';
+import jobs from '../data/jobs';
 
 import './Jobs.scss';
 

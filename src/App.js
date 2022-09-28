@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './App.scss';
-import styles from './styles';
+import styles from './data/styles';
 
 import Header from './components/Header';
 import Home from './components/Home';
