@@ -8,7 +8,7 @@ const Header = () => {
     <div id='sticky-nav'>
       <header>
         <div className='container'>
-          <div className='flex-grid'>
+          <div className='flex'>
             <div>
               <a href='/'>jonesevan.com</a>
             </div>

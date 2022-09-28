@@ -6,6 +6,9 @@ import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
 import Jobs from './components/Jobs';
+import Projects from './components/Projects';
+import Modal from './components/Modal';
+import { ModalProvider } from './providers/ModalProvider';
 
 function App() {
   useEffect(() => {
@@ -22,11 +25,14 @@ function App() {
 
   return (
     <div id="App">
-      <Header />
-      <Home />
-      <About />
-      <Jobs />
-    
+      <ModalProvider>
+        <Header />
+        <Home />
+        <About />
+        <Jobs />
+        <Projects />
+        <Modal />
+      </ModalProvider>
     </div>
   );
 }

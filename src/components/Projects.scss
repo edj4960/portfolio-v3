@@ -1,0 +1,89 @@
+#projects-section {
+  margin-top: 10rem;
+}
+
+.flex-grid {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 0 0 -0.5rem;
+  padding: 0;
+  width: 100%;
+}
+
+.projects {
+  margin-top: 8rem;
+}
+
+.flex-item {
+  flex-basis: 50%;
+  max-width: 50%;
+  &:nth-child(odd) {
+    .project {
+      margin-top: -2rem;
+      margin-left: 5rem;
+      margin-right: 2.5rem;
+    }
+  }
+  &:nth-child(even) {
+    .project {
+      margin-top: 2rem;
+      margin-left: 2.5rem;
+      margin-right: 5rem;
+    }
+  }
+}
+
+.project {
+  cursor: pointer;
+  position: initial;
+  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+  img {
+    border-radius: 1rem;
+    max-width: 100%;
+    transition: box-shadow 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+  }
+
+  h3 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    transition: color .25s;
+
+    &::after {
+      content: "";
+      width: 100%;
+      display: block;
+      width: 0px;
+      height: 2px;
+      position: relative;
+      bottom: 3px;
+      background-color: var(--main);
+      opacity: 0.5;
+      transition: width 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+    h3 {
+      color: var(--main);
+    }
+    h3::after {
+      width: 100%;
+    }
+    img {
+      box-shadow: 0px 5px 15px rgb(151, 151, 151);
+    }
+  } 
+
+  p {
+    line-height: 1.5;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+}
