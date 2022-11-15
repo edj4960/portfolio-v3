@@ -12,7 +12,7 @@ const Projects = () => {
       <div className='container'>
         <SectionHeader>What I've Built</SectionHeader>
 
-        <div className='flex-grid projects'>
+        <div className='projects'>
           {
             projects.map(project => <ProjectThumbnail project={project} key={project.title} />)
           }

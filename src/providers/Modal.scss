@@ -7,18 +7,17 @@
   position: fixed;
   top: 0;
   height: 100vh;
-  z-index: 1000;
-  backdrop-filter: blur(2px);
-  background-color: black;
-  opacity: .2;
+  z-index: 2000;
+  background-color: rgba(0,0,0,0);
+  backdrop-filter: blur(0px);
+  transition: background-color .5s ease, backdrop-filter .5s ease;
 }
 
 .modal-container {
   position: fixed;
-  z-index: 1001;
-  width: min(1000px, 100%);
-  height: 600px;
-  // background-color: white;
+  z-index: 2001;
+  width: min(600px, 88vw);
+  height: min(600px, 88vh);
   margin: 0 auto;
   top: 50%;
   left: 50%;
@@ -26,41 +25,63 @@
   border-radius: 1rem;
   opacity: 1;
   padding: 20px;
+  transition: opacity .5s ease, transform .5s ease;
+}
+
+.hide {
+  .modal-container {
+    opacity: 0;
+    transform: translate(-50%, -55%);
+    .circle {
+      background: rgba(var(--accent), 0);
+    }
+  }
 }
 
 .overflow-hidden {
   overflow: hidden;
+  .circle {
+    background: rgba(var(--accent), .15);
+  }
 }
 
 .modal-content {
   opacity: 0;
+  padding: 20px;
+  height: 100%;
 }
 
 .exit {
-  width: 50px;
-  height: 50px;
-  background-color: var(--main);
-  border-radius: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 35px;
-  font-weight: 900;
-  color: white;
-  line-height: 1px;
-  position: absolute;
-  right: 0;
   cursor: pointer;
-  transition: box-shadow .25s ease-in-out, transform .25s ease-in-out;
-  &:hover {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  div {
+    width: 50px;
+    height: 50px;
+    background-color: var(--main);
+    border-radius: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 900;
+    color: white;
+    line-height: 1px;
+    transition: box-shadow .25s ease-in-out, transform .25s ease-in-out;
+  }
+  &:hover div {
     box-shadow: 0px 5px 10px var(--main);
     transform: translateY(-5px);
   }
 }
 
-.show {
-  display: block;
+.modal.show {
+  .modal-mask { 
+    background-color: rgba(0,0,0,.5);
+    backdrop-filter: blur(4px);
+  }
   .bubble {
     border-radius: 100%;
     background-color: var(--main2);
@@ -76,8 +97,20 @@
     animation-name: contentanim;
     animation-duration: .5s;
     animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
     animation-delay: 1s;
   }
+}
+
+.circle {
+  border-radius: 100%;
+  width: 45rem;
+  height: 45rem;
+  position: absolute;
+  left: -20rem;
+  top: -22rem;
+  background: rgba(var(--accent), 0);
+  transition: background 1s ease-in-out 1s;
 }
 
 .bubble {
@@ -93,18 +126,26 @@
     height: 150px;
     top: 150%;
   }
-  50% {
+  35% {
+    width: 150px;
+    height: 150px;
+    top: 50%;
+  }
+  38% {
     width: 150px;
     height: 150px;
     top: 50%;
     background-color: var(--main2);
   }
   100% {
-    width: max(120vw, 120vh);
-    height: max(120vw, 120vh);
+    width: max(120vw, 140vh);
+    height: max(120vw, 140vh);
     background-color: white;
   }
 }
+
+// width: min(600px, 100vw);
+// height: min(600px, 100vh);
 
 @keyframes contentanim {
   from {

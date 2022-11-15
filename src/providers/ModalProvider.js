@@ -18,12 +18,15 @@ const ModalProvider = props => {
     setContent(newcontent);
   }
 
-  const openModal = newcontent => {
+  const openModal = (newcontent) => {
     if (newcontent) {
-      setContent(content);
+      setContent(newcontent);
     }
 
-    modalRef.current.classList.add('show');
+    modalRef.current.style.display = 'block';
+    setTimeout(() => {
+      modalRef.current.classList.add('show');
+    }, 100);
     setTimeout(() => {
       containerRef.current.classList.add('overflow-hidden');
     },300);
@@ -32,10 +35,13 @@ const ModalProvider = props => {
   const closeModal = () => {
     modalRef.current.classList.add('hide');
     setTimeout(() => {
-      modalRef.current.classList.remove('hide');
       modalRef.current.classList.remove('show');
       containerRef.current.classList.remove('overflow-hidden');
-    }, 300)
+      setTimeout(() => {
+        modalRef.current.classList.remove('hide');
+        modalRef.current.style.display = 'none';
+      }, 500);
+    }, 300);
   }
 
   return (
@@ -51,10 +57,12 @@ const ModalProvider = props => {
         <div className="modal-mask" onClick={closeModal} />
         <div className="modal-container" ref={containerRef}>
           <div className="bubble" />
+          <div className="circle" />
           <div className="modal-content">
-            <div className="exit" onClick={closeModal}>X</div>
+            <div className="exit" onClick={closeModal}>
+              <div>X</div>
+            </div>
             {content}
-            test
           </div>
         </div>
       </div>

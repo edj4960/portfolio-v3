@@ -1,20 +1,58 @@
 [
   {
     "title": "Test Title",
-    "desc": "Lorem ipsum dolor iem uprehum descute pelub tu esto gruv",
+    "desc": "Lorem ipsum dolor iem uprehum descute pelub tu esto gruv ",
+    "desclong":"Lorem ipsum dolor em prende ulo tos crato maj lorem toh laxh huro nu to leto ip. Lorem ipsum dolor em prende ulo tos crato maj lorem toh laxh huro nu to leto ip. Lorem ipsum dolor em prende ulo tos crato maj lorem toh laxh huro nu to leto ip.",
     "year": 2022,
     "tech": ["javascript", "php", "react"],
-    "img": "testimg.png"
+    "img": "testimg.png",
+    "img2": "testimg.png",
+    "github": "https://www.google.com",
+    "link": "https://www.google.com"
   },
   {
     "title": "Test Title 2",
     "desc": "Lorem ipsum dolor iem uprehum descute pelub tu esto gruv",
+    "desclong": "Lorem ipsum dolor em prende ulo tos crato maj lorem toh laxh huro nu to leto ip",
     "year": 2022,
     "tech": [
       "javascript",
       "php",
       "react"
     ],
-    "img": "testimg.png"
+    "img": "testimg.png",
+    "img2": "testimg.png",
+    "github": "https://www.google.com",
+    "link": "https://www.google.com"
+  },
+  {
+    "title": "Test Title 2",
+    "desc": "Lorem ipsum dolor iem uprehum descute pelub tu esto gruv",
+    "desclong": "Lorem ipsum dolor em prende ulo tos crato maj lorem toh laxh huro nu to leto ip",
+    "year": 2022,
+    "tech": [
+      "javascript",
+      "php",
+      "react"
+    ],
+    "img": "testimg.png",
+    "img2": "testimg.png",
+    "github": "https://www.google.com",
+    "link": "https://www.google.com"
+  },
+  {
+    "title": "Test Title 2",
+    "desc": "Lorem ipsum dolor iem uprehum descute pelub tu esto gruv",
+    "desclong": "Lorem ipsum dolor em prende ulo tos crato maj lorem toh laxh huro nu to leto ip",
+    "year": 2022,
+    "tech": [
+      "javascript",
+      "php",
+      "react"
+    ],
+    "img": "testimg.png",
+    "img2": "testimg.png",
+    "github": "https://www.google.com",
+    "link": "https://www.google.com"
   }
 ]

@@ -2,20 +2,16 @@
   margin-top: 10rem;
 }
 
-.flex-grid {
+.projects {
   box-sizing: border-box;
   display: flex;
   flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: wrap;
   list-style: none;
-  margin: 0 0 0 -0.5rem;
+  margin: 8rem 0 0 -0.5rem;
   padding: 0;
   width: 100%;
-}
-
-.projects {
-  margin-top: 8rem;
 }
 
 .flex-item {
@@ -43,7 +39,7 @@
   transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
   img {
     border-radius: 1rem;
-    max-width: 100%;
+    width: 100%;
     transition: box-shadow 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
   }
 
@@ -85,5 +81,41 @@
     line-height: 1.5;
     font-size: 20px;
     margin-top: 10px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .flex-item {
+    &:nth-child(odd) {
+      .project {
+        margin-top: -2rem;
+        margin-left: 0rem;
+        margin-right: 1rem;
+      }
+    }
+
+    &:nth-child(even) {
+      .project {
+        margin-top: 2rem;
+        margin-left: 1rem;
+        margin-right: 0rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .projects {
+    flex-direction: column;
+    margin: 8rem 0 0 0;
+  }
+  .flex-item {
+    max-width: 100%; 
+    flex-basis: 100%;
+    &:nth-child(odd), &:nth-child(even) {
+      .project {
+        margin: 0 0 5rem 0;
+      }
+    }
   }
 }

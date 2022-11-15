@@ -1,13 +1,13 @@
 import React, { useContext, useRef } from "react";
 import { ModalContext } from "../providers/ModalProvider";
+import ProjectContent from "./ProjectContent";
 
 const ProjectThumbnail = ({ project }) => {
   const projectRef = useRef();
   const { openModal } = useContext(ModalContext);
 
   const displayProject = () => {
-    openModal(<div>{project.title}</div>);
-    // projectRef.current.classList.add('view');
+    openModal(<ProjectContent project={project} />);
   }
 
   return (
