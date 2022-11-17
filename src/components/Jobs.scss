@@ -1,6 +1,6 @@
 #jobs-section {
-  margin-top: 10rem;
-  --tab-height: 51.5px;
+  padding-top: 10rem;
+  --tab-height: 52px;
   --offset: 5px;
 
   #jobs-list {
@@ -19,18 +19,25 @@
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
       color: var(--dark2);
+      transition: color .2s;
       font-weight: 700;
       cursor: pointer;
       &:hover, &.selected {
-        background-color: rgba(var(--accent), 0.1);;
+        background-color: rgba(var(--accent), 0.1);
       }
       transition: all .25s;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 550px) {
+      flex-direction: row;
     }
   }
 }
 
 .jobs-selector {
   border-right: 5px solid var(--main);
+  transition: border-right var(--color-tran-speed);
   width: fit-content;
   height: fit-content;
   position: relative;
@@ -53,6 +60,16 @@
   &::after {
     bottom: -3px;
   }
+
+  @media (max-width: 550px) {
+    &::before, &::after {
+      display: none;
+    }
+    border-right: none;
+    margin: 0 auto 15px;
+    border-bottom: 5px solid var(--main);
+    transition: border-bottom var(--color-tran-speed);
+  }
 }
 
 .jobs-content {
@@ -71,7 +88,7 @@
 .job-text {
   width: 450px;
 
-  @media (max-width: 600px) {
+  @media (max-width: 670px) {
     width: 100%;
   }
 
@@ -82,6 +99,7 @@
     position: relative;
     margin-bottom: 15px;
     color: var(--dark);
+    transition: color var(--color-tran-speed);
     font-weight: 700;
     &::before {
       content: "";
@@ -102,19 +120,28 @@
 
 .jobs-container {
   display: flex;
+  @media (max-width: 550px) {
+    flex-direction: column;
+  }
 }
 
 .selected-job {
   padding-left: 15px;
   transition: opacity 0.4s ease-in-out;
+  height: 300px;
+  @media (max-width: 500px) {
+    height: 600px;
+  }
   h3 {
     font-size: 24px;
     margin: 5px 0 0 0;
     span:nth-child(1) {
       color: var(--dark2);
+      transition: color var(--color-tran-speed);
     }
     span:nth-child(2) {
       color: var(--main);
+      transition: color var(--color-tran-speed);
     }
   }
 
@@ -152,7 +179,10 @@
   background-color: var(--dark);
   position: absolute;
   right: -5px;
-  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s, color var(--color-tran-speed);
+  @media (max-width: 550px) {
+    display: none;
+  }
 }
 
 @media (max-width: 1100px) {

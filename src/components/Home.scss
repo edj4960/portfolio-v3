@@ -7,7 +7,8 @@
 }
 
 .main-banner {
-  background: linear-gradient(91.09deg, var(--main) 33.39%, var(--main2) 100.04%);
+  background-color: var(--main);
+  transition: background-color var(--color-tran-speed);
   overflow: hidden;
   padding-top: 5.33333rem;
   position: relative;
@@ -17,11 +18,15 @@
 
 .banner-left {
   padding-top: 4rem;
+  p {
+    font-family: LeckerliOne;
+  }
 }
 
 button {
   font-size: 24px;
   color: var(--dark2);
+  transition: color var(--color-tran-speed);
   padding: 15px 60px;
   font-weight: 700;
   cursor: pointer;
@@ -31,5 +36,6 @@ button {
   &:hover {
     color: white;
     background-color: var(--dark2);
+    transition: background-color var(--color-tran-speed);
   }
 }

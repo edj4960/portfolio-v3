@@ -5,9 +5,9 @@
     "link": "https://newage.com/",
     "dates": "September 2021 - Present",
     "info": [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel leo imperdiet, ultrices justo et",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel leo imperdiet, ultrices justo et",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel leo imperdiet, ultrices justo et"
+      "Maintain a complex technology infastructure and collaborate with product team regularly to implement new features",
+      "Lead development of Points Sharing - a Laravel module allowing company partners to share earned points with other partners.",
+      "Suggested improvements to envrironment structure that increased productivity by 10%."
     ]
   },
   {
@@ -16,31 +16,30 @@
     "link": "https://storier.fm/",
     "dates": "April 2021 - Present",
     "info": [
-      "Testing",
-      "testing 2",
-      "testing 3"
+      "Improved React website by implementing a clean and responsive design, leading to a 10% increase in sign-ups.",
+      "Enhanced business model by creating a 3 tier subscription flow integrating with Stripe resulting in a 40% increase in revenue.",
+      "Suggested improvements to agile structure resulting in increased productivity and streamlined communication."
     ]
   },
   {
     "name": "Amano",
     "title": "Software Engineer",
     "link": "https://storier.fm/",
-    "dates": "April 2021 - Present",
+    "dates": "May 2021 - July 2021",
     "info": [
-      "Testing",
-      "testing 2",
-      "testing 3"
+      "Created prototype dashboard for viewing saved IOT device data utilizing React, AWS IOT, Amplify, Lambda, and DynamoDB.",
+      "Contributed ideas and suggestions in team meetings and delivered updates on deadlines, designs and enhancements."
     ]
   },
   {
     "name": "Campus Accom",
     "title": "Software Engineer",
     "link": "https://housing.byu.edu/",
-    "dates": "April 2021 - Present",
+    "dates": "April 2019 - April 2021",
     "info": [
-      "Testing",
-      "testing 2",
-      "testing 3"
+      "Updated and maintained housing.byu.edu based on client specifications utilizing ASP.net, VB.net, Oracle and JavaScript.",
+      "Promoted to Lead Developer with responsibilities over high level system structure and overseeing team project progress.",
+      "Suggested/implemented improvements to system structure and company workflow that increased company proficiency by 20%."
     ]
   }
 ]

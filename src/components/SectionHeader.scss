@@ -1,6 +1,7 @@
 .section-header {
   display: flex;
   flex-direction: row;
+  font-family: Leckerlione;
   align-items: center;
   width: 100%;
   text-align: center;
@@ -8,6 +9,7 @@
     flex-grow: 1;
     order: 1;
     background-color: var(--main);
+    transition: background-color var(--color-tran-speed);
     content: "";
     height: 4px;
     border-radius: 99px;
@@ -16,8 +18,9 @@
 
 .header-content {
   color: var(--dark2);
+  transition: color var(--color-tran-speed);
   font-weight: 700;
-  font-size: 48px;
+  font-size: min(48px, 8vw);
   order: 1;
-  margin: 0 .5rem;
+  margin: 0 1rem;
 }

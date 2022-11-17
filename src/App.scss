@@ -2,22 +2,38 @@
 
 #App {
   font-family: 'Nunito', sans-serif;
-  height: 10000px;
+  --color-tran-speed: 1s;
+}
+
+@font-face {
+  font-family: LeckerliOne;
+  src: url(fonts/LeckerliOne-Regular.ttf);
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
 }
 
 h1 {
   font-size: 96px;
   letter-spacing: -.08rem;
   color: var(--dark2);
+  transition: color var(--color-tran-speed);
   margin-bottom: 0;
   font-weight:900;
   line-height: 1;
+
+  @media (max-width: 600px) {
+    font-size: 60px;
+  }
 }
 
 .container {
   margin: 0 auto;
-  width: min(1245px, 90%);
-  padding: 0 0.27778rem;
+  max-width: min(1245px, 90%);
   position: relative;
 }
 
@@ -25,12 +41,14 @@ h1 {
   height: 4px;
   width: 15rem;
   background-color: var(--dark2);
+  transition: background-color var(--color-tran-speed);
   border-radius: 99px;
   margin: 1rem 0;
 }
 
 .sub-title {
   color: var(--dark2);
+  transition: color var(--color-tran-speed);
   font-weight: 700;
   font-size: 40px;
   margin-top: 0;
@@ -44,11 +62,16 @@ button {
   padding: 10px 20px;
   background-color: white;
   color: var(--dark2);
+  transition: color var(--color-tran-speed);
   font-weight: 700;
   &:hover {
     cursor: pointer;
     
   }
+}
+
+b {
+  font-weight: bolder;
 }
 
 .right {
@@ -60,11 +83,13 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 a {
   text-decoration: none;
   color: var(--dark2);
+  transition: color var(--color-tran-speed);
 }
 
 ul {
@@ -75,12 +100,77 @@ ul {
 
 .svg-stroke {
   stroke: var(--dark);
+  transition: stroke var(--color-tran-speed);
 }
 
 .svg-fill-accent {
   fill: rgba(var(--accent), 0.5);
+  transition: fill var(--color-tran-speed);
 }
 
 hr {
   margin: 5rem 0;
+}
+
+#user-guide {
+  & > * {
+    animation-name: guide-anim;
+    animation-duration: 1s;
+    animation-delay: .25s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+
+  .arrow-icon {
+    z-index: 2000;
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    filter: drop-shadow(0 5px 5px rgba(0, 0, 0, .3));
+
+    path {
+      fill: white;
+      stroke: white;
+    }
+  }
+
+  .guide-text {
+    cursor: default;
+    font-family: LeckerliOne;
+    position: absolute;
+    top: 134px;
+    left: 228px;
+    width: 187px;
+    font-size: 23px;
+    color: white;
+    z-index: 2000;
+    text-shadow: 0 5px 5px rgba(0,0,0,.3);
+
+    @media (max-width: 500px) {
+      left: 125px;
+    }
+  }
+}
+
+.footer {
+  margin: 200px auto 20px;
+  width: fit-content;
+  font-family: LeckerliOne;
+  a {
+    color: var(--dark2);
+    position: relative;
+    &:hover {
+      color: var(--main);
+    }
+  }
+}
+
+@keyframes guide-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+  }
 }

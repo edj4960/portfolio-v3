@@ -1,58 +1,60 @@
 [
   {
-    "title": "Test Title",
-    "desc": "Lorem ipsum dolor iem uprehum descute pelub tu esto gruv ",
-    "desclong":"Lorem ipsum dolor em prende ulo tos crato maj lorem toh laxh huro nu to leto ip. Lorem ipsum dolor em prende ulo tos crato maj lorem toh laxh huro nu to leto ip. Lorem ipsum dolor em prende ulo tos crato maj lorem toh laxh huro nu to leto ip.",
+    "title": "Storier Website",
+    "desc": "The main website for Storier with a new design using using React, Algolia, and Stripe",
+    "desclong":"Enhanced the entirety of <a href='https://storier.fm' rel='noreferrer' target='_blank'>storier.fm</a> with a new responsive design. Update included dynamic animations and a lazy loading searchable library integrating with algolia.",
     "year": 2022,
-    "tech": ["javascript", "php", "react"],
-    "img": "testimg.png",
-    "img2": "testimg.png",
-    "github": "https://www.google.com",
-    "link": "https://www.google.com"
+    "tech": ["javascript", "react", "algolia", "stripe", "nodejs"],
+    "coverImg": "storierCover.png",
+    "img": "storier1.png",
+    "img2": "storier2.png",
+    "link": "https://storier.fm"
   },
   {
-    "title": "Test Title 2",
-    "desc": "Lorem ipsum dolor iem uprehum descute pelub tu esto gruv",
-    "desclong": "Lorem ipsum dolor em prende ulo tos crato maj lorem toh laxh huro nu to leto ip",
+    "title": "jonesevan.com",
+    "desc": "jonesevan.com (this site) designed and created by me.",
+    "desclong": "<p>This is the third iteration of my portfolio site, and I think it is (almost) perfect! The site allows for dynamic style changing using css variables and has a custom built context for creating modals (like this one).<p><p>This site was really fun to make and I consider it one of my greatest accomplishments. Check out the <a href='https://github.com/edj4960/portfolio-v3' rel='noreferrer' target='_blank'>source code</a> to see how it was built.</p>",
     "year": 2022,
     "tech": [
+      "react",
       "javascript",
-      "php",
-      "react"
+      "firebase"
     ],
-    "img": "testimg.png",
-    "img2": "testimg.png",
-    "github": "https://www.google.com",
-    "link": "https://www.google.com"
+    "coverImg": "ejCover.png",
+    "img": "",
+    "img2": "",
+    "github": "https://github.com/edj4960/portfolio-v3"
   },
   {
-    "title": "Test Title 2",
-    "desc": "Lorem ipsum dolor iem uprehum descute pelub tu esto gruv",
-    "desclong": "Lorem ipsum dolor em prende ulo tos crato maj lorem toh laxh huro nu to leto ip",
+    "title": "OfficeSum",
+    "desc": "A placeholder text generator utilizing quotes from The Office... Wait what?",
+    "desclong": "I'm always in need of throwaway text when creating mock-ups, and I'm also a huge fan of The Office. So it made sense to create a generator using quotes from the show! The project is Currently hosted on github pages.",
     "year": 2022,
     "tech": [
-      "javascript",
-      "php",
-      "react"
+      "react",
+      "javascript"
     ],
-    "img": "testimg.png",
-    "img2": "testimg.png",
-    "github": "https://www.google.com",
-    "link": "https://www.google.com"
+    "coverImg": "officesumCover.png",
+    "img": "officesum1.png",
+    "img2": "officesum2.png",
+    "github": "https://github.com/edj4960/officesum",
+    "link": "https://edj4960.github.io/officesum/"
   },
   {
-    "title": "Test Title 2",
-    "desc": "Lorem ipsum dolor iem uprehum descute pelub tu esto gruv",
-    "desclong": "Lorem ipsum dolor em prende ulo tos crato maj lorem toh laxh huro nu to leto ip",
-    "year": 2022,
+    "title": "Storier App",
+    "desc": "An app I worked on for kids to enjoy audiobooks utilizing React Native, Firebase, Stripe, and Algolia.",
+    "desclong": "One of the main features I added to the storier app was the token system. This system gave tokens to users every week that could be used to purchase audio books.",
+    "year": 2021,
     "tech": [
+      "react native",
       "javascript",
-      "php",
-      "react"
+      "firebase",
+      "nodejs",
+      "stripe"
     ],
-    "img": "testimg.png",
-    "img2": "testimg.png",
-    "github": "https://www.google.com",
-    "link": "https://www.google.com"
+    "coverImg": "storierappCover.png",
+    "img": "storierapp2.png",
+    "img2": "storierapp1.png",
+    "link": "https://apps.apple.com/us/app/storier-audio-for-kids/id1585050099"
   }
 ]

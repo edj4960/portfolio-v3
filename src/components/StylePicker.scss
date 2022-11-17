@@ -1,0 +1,51 @@
+#style-picker {
+  --radius: 50px;
+  @media (max-width: 800px) {
+    --radius: 35px;
+  }
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 1900;
+  cursor: pointer;
+
+  .hint-circle {
+    position: absolute;
+    top: calc(var(--radius) * -1);
+    left: calc(var(--radius) * -1);
+  
+    transition: all .3s;
+    height: calc(var(--radius) * 2);
+    width: calc(var(--radius) * 2);
+    background-color: var(--dark);
+    border-radius: 100%;
+    z-index: 1900;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+  }
+
+  .style-circle {
+    border-radius: 100%;
+    position: absolute;
+    z-index: 2000;
+    transition: all .5s;
+    width: 0;
+    height: 0;
+  }
+
+  &:hover {
+    --radius: 95px;
+    width: 150px;
+    height: 150px;
+    .hint-circle {
+      box-shadow: 8px 8px 15px rgba(0,0,0,.2);
+    }
+  }
+
+  &:not(:hover) {
+    .style-circle {
+      width: 0 !important;
+      height: 0 !important;
+    }
+  }
+
+}

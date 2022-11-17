@@ -17,7 +17,7 @@ const ProjectThumbnail = ({ project }) => {
         onClick={displayProject}
         ref={projectRef}
       >
-        <img src={require(`../images/${project.img}`)} alt="project thumbnail" />
+        <img src={require(`../images/${project.coverImg}`)} alt="project thumbnail" />
         <h3>{project.title}</h3>
         <p>{project.desc}</p>
       </div>

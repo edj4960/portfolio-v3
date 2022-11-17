@@ -1,32 +1,141 @@
 #sticky-nav {
   position: sticky;
   z-index: 2000;
-}
 
-header {
-  padding: 2rem 0;
-  background: linear-gradient(91.09deg, var(--main) 33.39%, var(--main2) 100.04%);
-  color: var(--dark2);
-  font-size: 16px;
-  font-weight: 700;
-}
+  .logo {
+    font-family: LeckerliOne;
+  }
+
+  path {
+    fill: var(--dark2);
+    transition: fill var(--color-tran-speed);
+  }
+
+  svg {
+    stroke: var(--dark2);
+    transition: stroke var(--color-tran-speed);
+  }
+
+  header {
+    padding: 2rem 0;
+    background-color: var(--main);
+    color: var(--dark2);
+    transition: color var(--color-tran-speed), background-color var(--color-tran-speed);
+    font-size: 16px;
+    font-weight: 700;
+  }
 
 
 
-.navigation {
-  ul {
-    display: flex;
-    gap: 2rem;
-    li {
-      cursor: pointer;
+  .navigation {
+    ul {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+
+      li {
+        cursor: pointer;
+        position: relative
+      }
+    }
+
+    a {
+      color: var(--dark2);
+      transition: all .35s ease;
+
+      &::after {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-radius: 100%;
+        background: var(--dark2);
+        position: absolute;
+        bottom: -14px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all .35s ease-in-out, border .1s ease-in-out;
+        opacity: 0;
+      }
+
+      &.active::after {
+        opacity: 1;
+      }
+
+      &:hover:not(.active) {
+        &::after {
+          border: var(--dark2) 2px solid;
+          opacity: 1;
+          background-color: transparent;
+        }
+      }
+    }
+
+    @media (max-width: 850px) {
+      display: none;
+
+      &.show {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        background-color: var(--main);
+        transition: background-color var(--color-tran-speed);
+        padding: 50px 40px;
+        animation-name: navExpand;
+        animation-duration: .2s;
+        animation-fill-mode: forwards;
+        z-index: 2000;
+
+        ul {
+          flex-direction: column;
+        }
+      }
     }
   }
 
-  a {
-    color: var(--dark2);
-    transition: all .35s;
-    &:hover {
-      color: white;
+  .mobile-nav-toggle {
+    @media (min-width: 851px) {
+      display: none;
     }
+
+    cursor: pointer;
+  }
+
+  .header-contact-me {
+    margin-top: 0;
+    font-size: 16px;
+    padding: 8px 24px;
+  }
+
+  .overlay-mask {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, .3);
+    backdrop-filter: blur(2px);
+    display: none;
+
+    &.show {
+      display: block;
+      @media (min-width: 851px) {
+        display: none;
+      }
+      animation-name: navExpand;
+      animation-duration: .2s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes navExpand {
+  0% {
+    transform: translate(100%, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
   }
 }

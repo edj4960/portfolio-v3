@@ -1,20 +1,25 @@
 
 .project-content {
   h3 {
-    font-size: 50px;
+    font-size: min(45px, 5vw);
     margin-top: 20px;
     margin-bottom: 20px;
     color: var(--dark);
+    transition: color var(--color-tran-speed);
+    position: relative;
+    font-family: LeckerliOne;
   
     &::after {
       background-color: var(--dark);
+      transition: background-color var(--color-tran-speed);
       content: "";
       height: 4px;
       border-radius: 99px;
       width: 50%;
       position: absolute;
-      left: 20px;
-      top: 105px;
+      bottom: 0;
+      left: 0px;
+      bottom: -10px;
     }
   }
 
@@ -28,6 +33,7 @@
     margin-right: 15px;
     height: 26px;
     color: var(--dark);
+    transition: color var(--color-tran-speed);
     font-weight: 700;
   }
 
@@ -36,7 +42,31 @@
     line-height: 1.8;
     font-size: 20px;
     color: var(--dark);
+    transition: color var(--color-tran-speed);
     font-weight: 600;
+    a {
+      position: relative;
+      color: var(--main);
+      transition: color var(--color-tran-speed);
+      display: inline-block;
+      &::after {
+        content: "";
+        width: 100%;
+        display: block;
+        width: 0px;
+        height: 2px;
+        position: relative;
+        bottom: 3px;
+        background-color: var(--main);
+        transition: background-color var(--color-tran-speed);
+        opacity: 0.5;
+        transition: width 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+        bottom: 4px;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+    }
   }
 
   .images {
@@ -46,13 +76,35 @@
   img {
     position: absolute;
     max-width: 52%;
-    border-radius: 1rem;
+    border-radius: .5rem;
+    box-shadow: 5px -1px 10px rgba(0,0,0,.35);
+    transition: left .5s, bottom .5s, right .5s, transform .5s;
+    cursor: pointer;
+    &:not(.view):hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .img-1 {
+    left: 0;
     bottom: 40px;
+    &.view {
+      bottom: 50%;
+      left: 50%;
+      transform: translate(-50%, 50%) scale(1.8);
+      z-index: 2200;
+    }
   }
 
   .img-2 {
     right: 20px;
     bottom: 70px;
+    &.view {
+      bottom: 50%;
+      right: 50%;
+      transform: translate(50%, 50%) scale(1.8);
+      z-index: 2200;
+    }
     // margin-bottom: 30px;
   }
 
@@ -67,12 +119,29 @@
     path {
       transition: fill .25s ease-in-out;
       fill: var(--main);
+      transition: fill var(--color-tran-speed);
     }
     &:hover {
       transform: translateY(-2px);
       path {
         fill: var(--dark)
       }
+    }
+  }
+
+  .inner-mask {
+    position: fixed;
+    top: -30px;
+    left: -30px;
+    z-index: 2100;
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+    transition: background-color .5s ease, backdrop-filter .5s ease;
+    &.show {
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, .5);
+      backdrop-filter: blur(4px);
     }
   }
 }

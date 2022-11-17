@@ -1,9 +1,9 @@
-import React, { Children } from 'react';
+import React from 'react';
 
-const Button = ({text, link, children}) => {
+const Button = ({style, className, children, onClick}) => {
 
   return (
-    <button>
+    <button style={style} className={className} onClick={onClick}>
       {children}
     </button>
   );

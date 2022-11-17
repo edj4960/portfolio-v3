@@ -1,5 +1,5 @@
 #about-section {
-  margin-top: 10rem;
+  padding-top: 10rem;
 
   .section-text {
     position: relative;
@@ -13,6 +13,7 @@
       height: 175px;
       border-radius: 100%;
       background-color: rgba(var(--accent), 0.15);
+      transition: background-color var(--color-tran-speed);
       margin: 0 auto;
       top: -38px;
       left: -54px;
@@ -25,17 +26,21 @@
     line-height: 1.8;
     font-weight: 700;
     color: var(--dark2);
+    transition: color var(--color-tran-speed);
   }
 
   ul {
     display: flex;
-    justify-content: space-between;
-    width: min(100%, 700px);
+    justify-content: center;
     margin: 0 auto;
     font-weight: 700;
     color: var(--dark2);
+    transition: color var(--color-tran-speed);
     margin-top: 2rem;
+    flex-wrap: wrap;
+    gap: 3rem;
   }
+
   li {
     position: relative;
 
@@ -47,12 +52,12 @@
       height: 20px;
       border-radius: 100%;
       background-color: rgba(var(--accent), 0.37);
+      transition: background-color var(--color-tran-speed);
       margin: 0 auto;
       bottom: -0rem;
-      top:0;
+      top: 0;
       left: -4px;
       z-index: -1;
-      // right: 0;
     }
   }
 }

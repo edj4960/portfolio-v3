@@ -8,20 +8,22 @@ import BannerRight from './BannerRight';
 const Home = () => {
 
   return (
-    <div id="home">
+    <section id="home">
       <section className='main-banner'>
         <div className='container'>
           <div className='banner-left'>
             <h1>Evan Jones</h1>
             <div className='accent-line' />
             <p className='sub-title'>Full-Stack Web Developer</p>
-            <Button>Contact Me</Button>
+            <Button onClick={() => { window.open('mailto:evandj423@gmail.com') }}>
+              Contact Me
+            </Button>
           </div>
           <BannerRight />
         </div>
         <MainBannerWave />
       </section>
-    </div>
+    </section>
   );
 }
 
