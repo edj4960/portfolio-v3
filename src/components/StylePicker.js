@@ -1,23 +1,50 @@
 import React, { useEffect, useState } from 'react';
 import styles from '../data/styles';
+import { useCookies } from 'react-cookie';
 
 import './StylePicker.scss';
 
 const StylePicker = () => {
+  const [cookies, setCookie] = useCookies(['styleIdx']);
   const [orderedStyles, setOrderedStyles] = useState([...styles]);
+  
+  const isValidIdx = (_idx) => {
+    if ((!_idx && _idx !== 0) || !Number.isInteger(parseInt(_idx)) || _idx > styles.length) {
+      return false;
+    }
+    return true;
+  }
+
+  const [idx, setIdx] = useState(isValidIdx(cookies?.styleIdx) ? parseInt(cookies?.styleIdx) : 0);
 
   useEffect(() => {
-    const appStyle = document.getElementById('App').style;
-    for (const key in orderedStyles[0]) {
-      appStyle.setProperty(`--${key}`, orderedStyles[0][key]);
+    if (!isValidIdx(idx)) {
+      setIdx(0);
+      setCookie('styleIdx', 0);
+      return;
     }
-  }, [orderedStyles]);
+
+    const appStyle = document.getElementById('App').style;
+    for (const key in styles[idx]) {
+      appStyle.setProperty(`--${key}`, styles[idx][key]);
+    }
+
+    let newStylesArr = [...styles];
+    for (let i = 0; i < idx; i++) {
+      newStylesArr.push(newStylesArr.shift());
+    }
+    setOrderedStyles(newStylesArr);
+  }, [idx, setCookie]);
 
   const changeStyle = () => {
-    document.cookie = "changedStyle=true";
-    let newStylesArr = [...orderedStyles];
-    newStylesArr.push(newStylesArr.shift());
-    setOrderedStyles(newStylesArr);
+    let newIdx = 0;
+
+    if (idx < styles.length - 1) {
+      newIdx = idx + 1;
+    }
+
+    setIdx(newIdx);
+    setCookie('styleIdx', newIdx);
   }
 
   return (

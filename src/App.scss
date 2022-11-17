@@ -114,6 +114,7 @@ hr {
 
 #user-guide {
   & > * {
+    z-index: 1900; 
     animation-name: guide-anim;
     animation-duration: 1s;
     animation-delay: .25s;
@@ -122,9 +123,8 @@ hr {
   }
 
   .arrow-icon {
-    z-index: 2000;
     position: absolute;
-    top: 80px;
+    top: 100px;
     left: 50px;
     filter: drop-shadow(0 5px 5px rgba(0, 0, 0, .3));
 
@@ -138,12 +138,11 @@ hr {
     cursor: default;
     font-family: LeckerliOne;
     position: absolute;
-    top: 134px;
+    top: 144px;
     left: 228px;
-    width: 187px;
+    width: 190px;
     font-size: 23px;
     color: white;
-    z-index: 2000;
     text-shadow: 0 5px 5px rgba(0,0,0,.3);
 
     @media (max-width: 500px) {
@@ -168,7 +167,7 @@ hr {
 @keyframes guide-anim {
   0% {
     opacity: 0;
-    transform: translateY(-50px);
+    transform: translateY(20px);
   }
   100% {
     opacity: 1;

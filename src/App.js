@@ -12,7 +12,7 @@ import { ReactComponent as ArrowIconSmall } from './images/arrowsmall.svg';
 import { CookiesProvider, useCookies } from 'react-cookie';
 
 function App() {
-  const [cookies] = useCookies(['changedStyle']);
+  const [cookies] = useCookies(['styleIdx']);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const onResize = () => {
@@ -33,14 +33,14 @@ function App() {
         <ModalProvider>
           <Header />
 
-          <div id='user-guide' style={{opacity: cookies.changedStyle ? 0 : 1}}>
+          <div id='user-guide' style={{ opacity: cookies.styleIdx ? 0 : 1}}>
             {
               screenWidth > 500 ?
                 <ArrowIcon className='arrow-icon' /> :
                 <ArrowIconSmall className='arrow-icon' />
             }
             <p className='guide-text'>
-              Click the circle to change the style
+              Click the corner to change the style
             </p>
           </div>
 

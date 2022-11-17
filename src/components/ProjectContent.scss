@@ -26,11 +26,13 @@
   ul {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   li {
     display: inline;
     margin-right: 15px;
+    margin-bottom: 5px;
     height: 26px;
     color: var(--dark);
     transition: color var(--color-tran-speed);
