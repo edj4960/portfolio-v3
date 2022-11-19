@@ -15,12 +15,17 @@ const StylePicker = () => {
     return true;
   }
 
-  const [idx, setIdx] = useState(isValidIdx(cookies?.styleIdx) ? parseInt(cookies?.styleIdx) : 0);
+  const getRandomStyle = () => {
+    return Math.floor(Math.random() * (styles.length-1));
+  }
+
+  const [idx, setIdx] = useState(isValidIdx(cookies?.styleIdx) ? parseInt(cookies?.styleIdx) : getRandomStyle());
 
   useEffect(() => {
     if (!isValidIdx(idx)) {
-      setIdx(0);
-      setCookie('styleIdx', 0);
+      let newStyleIdx = getRandomStyle();
+      setIdx(newStyleIdx);
+      setCookie('styleIdx', newStyleIdx);
       return;
     }
 
@@ -51,7 +56,7 @@ const StylePicker = () => {
     <div id="style-picker" onClick={changeStyle}>
       <div className='hint-circle' />
       {
-        orderedStyles.map((style, idx) => {
+        orderedStyles.slice(0,5).map((style, idx) => {
           let step = 90 / styles.length 
           let radius = 90 - (step * idx) + (idx * 4);
           return (

@@ -6,6 +6,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Jobs from './components/Jobs';
 import Projects from './components/Projects';
+import Contact from './components/Contact';
 import { ModalProvider } from './providers/ModalProvider';
 import { ReactComponent as ArrowIcon } from './images/arrow.svg';
 import { ReactComponent as ArrowIconSmall } from './images/arrowsmall.svg';
@@ -48,6 +49,7 @@ function App() {
           <About />
           <Jobs />
           <Projects />
+          <Contact />
           <div className='footer'>
             <a href="https://github.com/edj4960/portfolio-v3" target="_blank" rel="noreferrer">
               Designed & Built by Evan Jones

@@ -14,7 +14,11 @@
   display: block;
   pointer-events: none;
   position: relative;
-  transform: translateX(-70rem);
+  transform: translate(-70rem, 1rem);
   transition: transform .3s;
   width: 284.44444rem;
+
+  @media (min-width: 1800px) {
+    transform: translate(-50rem, 1rem);
+  }
 }
