@@ -8,7 +8,7 @@ import './Contact.scss';
 const Contact = () => {
 
   return (
-    <div id="contact-section">
+    <section id="contact-section">
       <div className='container'>
         <SectionHeader>What's Next?</SectionHeader>
 
@@ -28,7 +28,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

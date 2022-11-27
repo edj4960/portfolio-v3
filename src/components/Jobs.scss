@@ -18,6 +18,9 @@
       margin: var(--offset) 0;
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
+      @media (max-width: 550px) {
+        border-radius: 5px;
+      }
       color: var(--dark2);
       transition: color .2s;
       font-weight: 700;
@@ -131,6 +134,13 @@
   height: 300px;
   @media (max-width: 500px) {
     height: 400px;
+    .company-link {
+      display: block;
+      margin-left: -8px;
+    }
+    ul {
+      padding-left: 0;
+    }
   }
   h3 {
     font-size: 24px;

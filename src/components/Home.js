@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <section id="home">
-      <section className='main-banner'>
+      <div className='main-banner'>
         <div className='container'>
           <div className='banner-left'>
             <h1>Evan Jones</h1>
@@ -22,7 +22,7 @@ const Home = () => {
           <BannerRight />
         </div>
         <MainBannerWave />
-      </section>
+      </div>
     </section>
   );
 }

@@ -3,7 +3,7 @@
     "title": "Storier Website",
     "desc": "The main website for Storier with a new design using using React, Algolia, and Stripe",
     "desclong":"Enhanced the entirety of <a href='https://storier.fm' rel='noreferrer' target='_blank'>storier.fm</a> with a new responsive design. Update included dynamic animations and a lazy loading searchable library integrating with algolia.",
-    "year": 2022,
+    "year": 2021,
     "tech": ["javascript", "react", "algolia", "stripe", "nodejs"],
     "coverImg": "storierCover.png",
     "img": "storier1.png",
@@ -27,8 +27,8 @@
   },
   {
     "title": "OfficeSum",
-    "desc": "A placeholder text generator utilizing quotes from The Office... Wait what?",
-    "desclong": "I'm always in need of throwaway text when creating mock-ups, and I'm also a huge fan of The Office. So it made sense to create a generator using quotes from the show! The project is Currently hosted on github pages.",
+    "desc": "A placeholder text generator utilizing quotes from The Office.",
+    "desclong": "I'm always in need of throwaway text when creating mock-ups, and I'm also a huge fan of The Office. So it made sense to create a generator using quotes from the show! The project is hosted on <a href='https://edj4960.github.io/officesum/' rel='noreferrer' target='_blank'>github pages</a>.",
     "year": 2022,
     "tech": [
       "react",

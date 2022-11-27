@@ -35,7 +35,7 @@
 
       li {
         cursor: pointer;
-        position: relative
+        position: relative;
       }
     }
 
@@ -70,7 +70,7 @@
       }
     }
 
-    @media (max-width: 850px) {
+    @media (max-width: 900px) {
       display: none;
 
       &.show {
@@ -95,7 +95,7 @@
   }
 
   .mobile-nav-toggle {
-    @media (min-width: 851px) {
+    @media (min-width: 901px) {
       display: none;
     }
 
@@ -120,7 +120,7 @@
 
     &.show {
       display: block;
-      @media (min-width: 851px) {
+      @media (min-width: 901px) {
         display: none;
       }
       animation-name: navExpand;

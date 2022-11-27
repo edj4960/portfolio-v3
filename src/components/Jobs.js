@@ -52,7 +52,7 @@ const Jobs = () => {
             <div className='selected-job' ref={selectedJobRef}>
               <h3>
                 <span>{jobInfo.title}</span>  
-                <span>
+                <span className='company-link'>
                   &nbsp;@&nbsp;
                   <a href={jobInfo.link} rel="noreferrer" target="_blank">{jobInfo.name}</a>
                 </span>

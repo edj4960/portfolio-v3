@@ -24,7 +24,7 @@
   {
     "name": "Amano",
     "title": "Software Engineer",
-    "link": "https://storier.fm/",
+    "link": "https://engineering.byu.edu/showcase/amano",
     "dates": "May 2021 - July 2021",
     "info": [
       "Created prototype dashboard for viewing saved IOT device data utilizing React, AWS IOT, Amplify, Lambda, and DynamoDB.",
