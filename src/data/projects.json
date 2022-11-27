@@ -2,7 +2,7 @@
   {
     "title": "Storier Website",
     "desc": "The main website for Storier with a new design using using React, Algolia, and Stripe",
-    "desclong":"Enhanced the entirety of <a href='https://storier.fm' rel='noreferrer' target='_blank'>storier.fm</a> with a new responsive design. Update included dynamic animations and a lazy loading searchable library integrating with algolia.",
+    "desclong":"Enhanced the entirety of <a href='https://storier.fm' rel='noreferrer' target='_blank'>storier.fm</a> with a new responsive design. Update included dynamic animations and a lazy loading searchable library integrated with algolia.",
     "year": 2021,
     "tech": ["javascript", "react", "algolia", "stripe", "nodejs"],
     "coverImg": "storierCover.png",
@@ -26,19 +26,19 @@
     "github": "https://github.com/edj4960/portfolio-v3"
   },
   {
-    "title": "OfficeSum",
-    "desc": "A placeholder text generator utilizing quotes from The Office.",
-    "desclong": "I'm always in need of throwaway text when creating mock-ups, and I'm also a huge fan of The Office. So it made sense to create a generator using quotes from the show! The project is hosted on <a href='https://edj4960.github.io/officesum/' rel='noreferrer' target='_blank'>github pages</a>.",
+    "title": "Newage Events",
+    "desc": "A page for finding information about upcoming events. Built using Vue, Laravel, and ButterCMS.",
+    "desclong": "Besides implementing the HTML and CSS for the page using Vue, I also designed the data schema for the various modules and implemented the retrieval of this data from ButterCMS.",
     "year": 2022,
     "tech": [
-      "react",
-      "javascript"
+      "Vue",
+      "Laravel",
+      "ButterCMS"
     ],
-    "coverImg": "officesumCover.png",
-    "img": "officesum1.png",
-    "img2": "officesum2.png",
-    "github": "https://github.com/edj4960/officesum",
-    "link": "https://edj4960.github.io/officesum/"
+    "coverImg": "newageCover.png",
+    "img": "newage1.png",
+    "img2": "newage2.png",
+    "link": "https://newage.com/events"
   },
   {
     "title": "Storier App",
