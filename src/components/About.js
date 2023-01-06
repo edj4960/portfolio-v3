@@ -28,6 +28,7 @@ const About = () => {
           <li>Firebase</li>
           <li>Vue</li>
           <li>PHP</li>
+          <li>Laravel</li>
         </ul>
       </div>
     </section>

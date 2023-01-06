@@ -11,6 +11,16 @@
     "link": "https://storier.fm"
   },
   {
+    "title": "Dynamic Prompt Loopback",
+    "desc": "An add-on script for Stable Diffusion for dynamically updating prompts during loopback image creation",
+    "desclong": "One of the many cool things you can do with Stable Diffusion is create dream-like animations that change images little by little over time. This script makes that process easier by allowing multiple prompts to be set and processed at once. Try it out and see what cool animations you can make!",
+    "tech": ["python"],
+    "coverImg": "loopbackCover.png",
+    "img": "loopback1.png",
+    "img2": "loopbackCover.png",
+    "github": "https://github.com/edj4960/Dynamic-Prompt-Loopback"
+  },
+  {
     "title": "jonesevan.com",
     "desc": "jonesevan.com (this site) designed and created by me.",
     "desclong": "<p>This is the third iteration of my portfolio site, and I think it is (almost) perfect! The site allows for dynamic style changing using css variables and has a custom built context for creating modals (like this one).<p><p>This site was really fun to make and I consider it one of my greatest accomplishments. Check out the <a href='https://github.com/edj4960/portfolio-v3' rel='noreferrer' target='_blank'>source code</a> to see how it was built.</p>",
